@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vue 2 Tutorial</title>
-  <link href="styles.css" ref="stylesheet"/>
+  <link href="styles.css" rel="stylesheet"/>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
 </head>
 <body>
@@ -16,8 +16,17 @@
     <a :href="website" target="_blank">Google</a>
     <input type="text" :value="name"/>
     <div v-html="websiteTag"></div>
+    <h1>-</h1>
+    <div>
+      <h2>Events</h2>
+      <button @click="add(1)">Add a Year</button>
+      <button v-on:click="subtract(1)">Subtract a Year</button>
+      <button @dblclick="add(10)">Double Click - Add 10 Years</button>
+      <button v-on:dblclick="subtract(10)">Double Click - Subtract 10 Years</button>
+      <p>My age is {{ age }}</p>
+      <div id="canvas" v-on:mousemove="updateXY">{{ x }}, {{ y }}</div>
+    </div>
   </div>
-
   <script src="app.js"></script>
 </body>
 </html>
