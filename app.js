@@ -7,7 +7,9 @@ new Vue({
     websiteTag: '<a href="https://www.google.com">Google Tag</a>',
     age: 23,
     x: 0,
-    y: 0
+    y: 0,
+    keyboardName: '',
+    keyboardAge: ''
   },
   methods: {
     greet: function(timeOfDay) {
