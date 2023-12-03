@@ -57,6 +57,15 @@
         <span>Ryu</span>
       </div>
     </div>
+    <div>
+      <h2>Conditionals</h2>
+      <button v-on:click="conditionalError = !conditionalError">Toggle Error</button>
+      <button v-on:click="conditionalSuccess = !conditionalSuccess">Toggle Success</button>
+      <p v-if="conditionalError">There has been an error</p>
+      <p v-else-if="conditionalSuccess">There has been a success</p>
+      <p v-show="conditionalError">There has been an error</p>
+      <p v-show="conditionalSuccess">There has been a success</p>
+    </div>
   </div>
   <script src="app.js"></script>
 </body>
