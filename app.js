@@ -9,7 +9,10 @@ new Vue({
     x: 0,
     y: 0,
     keyboardName: '',
-    keyboardAge: ''
+    keyboardAge: '',
+    computedA: 0,
+    computedB: 0,
+    computedAge: 20
   },
   methods: {
     greet: function(timeOfDay) {
@@ -30,6 +33,14 @@ new Vue({
     },
     logAge: function(event) {
       console.log('logAge')
+    }
+  },
+  computed: {
+    addToA: function() {
+      return this.computedA + this.computedAge
+    },
+    addToB: function() {
+      return this.computedB + this.computedAge
     }
   }
 })
