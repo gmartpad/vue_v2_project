@@ -35,6 +35,15 @@
       <input type="text" v-model="keyboardAge"/>
       <span>{{ keyboardAge }}</span>
     </div>
+    <div>
+      <h2>Computed Properties</h2>
+      <button v-on:click="computedA++">Add to A</button>
+      <button v-on:click="computedB++">Add to B</button>
+      <p>A = {{ computedA }}</p>
+      <p>B = {{ computedB }}</p>
+      <p>Age + A = {{ addToA }}</p>
+      <p>Age + B = {{ addToB }}</p>
+    </div>
   </div>
   <script src="app.js"></script>
 </body>
