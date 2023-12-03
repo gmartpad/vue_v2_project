@@ -14,7 +14,9 @@ new Vue({
     computedB: 0,
     computedAge: 20,
     classAvailable: false,
-    nearby: false
+    nearby: false,
+    conditionalError: false,
+    conditionalSuccess: false
   },
   methods: {
     greet: function(timeOfDay) {
