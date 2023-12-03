@@ -29,9 +29,11 @@
     <div>
       <h2>Keyboard Events</h2>
       <label>Name:</label>
-      <input type="text" v-on:keyup.enter="logName"/>
+      <input type="text" v-model="keyboardName"/>
+      <span>{{ keyboardName }}</span>
       <label>Age:</label>
-      <input type="text" v-on:keyup.alt.enter="logAge"/>
+      <input type="text" v-model="keyboardAge"/>
+      <span>{{ keyboardAge }}</span>
     </div>
   </div>
   <script src="app.js"></script>
