@@ -12,7 +12,9 @@ new Vue({
     keyboardAge: '',
     computedA: 0,
     computedB: 0,
-    computedAge: 20
+    computedAge: 20,
+    classAvailable: false,
+    nearby: false
   },
   methods: {
     greet: function(timeOfDay) {
@@ -41,6 +43,12 @@ new Vue({
     },
     addToB: function() {
       return this.computedB + this.computedAge
+    },
+    compClasses: function() {
+      return {
+        available: this.classAvailable,
+        nearby: this.nearby
+      }
     }
   }
 })
