@@ -16,7 +16,13 @@ new Vue({
     classAvailable: false,
     nearby: false,
     conditionalError: false,
-    conditionalSuccess: false
+    conditionalSuccess: false,
+    loopCharacters: ['Mario', 'Luigi', 'Yoshi', 'Bowser'],
+    loopNinjas: [
+      { name: 'Ryu', age: 25 },
+      { name: 'Yoshi', age: 35 },
+      { name: 'Ken', age: 55 }
+    ]
   },
   methods: {
     greet: function(timeOfDay) {

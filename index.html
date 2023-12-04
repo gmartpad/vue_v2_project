@@ -66,6 +66,28 @@
       <p v-show="conditionalError">There has been an error</p>
       <p v-show="conditionalSuccess">There has been a success</p>
     </div>
+    <div>
+      <h2>Looping with v-for</h2>
+      <ul>
+        <li v-for="loopCharacter in loopCharacters">
+          {{ loopCharacter }}
+        </li>
+      </ul>
+      <ul>
+        <li v-for="(loopNinja, index) in loopNinjas">
+          Index: {{ index }} - Name: {{ loopNinja.name }} - Age: {{ loopNinja.age }}
+        </li>
+      </ul>
+      <template v-for="(loopNinja, index) in loopNinjas">
+        <h3>{{ index }}. {{ loopNinja.name }}</h3>
+        <p>{{ loopNinja.age }}</p>
+      </template>
+      <template v-for="(loopNinja, index) in loopNinjas">
+        <div v-for="(value, key) in loopNinja">
+          <p>{{ key }} - {{ value }}</p>
+        </div>
+      </template>
+    </div>
   </div>
   <script src="app.js"></script>
 </body>
