@@ -1,6 +1,7 @@
-new Vue({
-  el: "#vue-app",
+var one = new Vue({
+  el: "#vue-app-one",
   data: {
+    title: "Vue App One",
     name: "Gabriel",
     job: "Ninja",
     website: "https://www.google.com",
@@ -57,6 +58,28 @@ new Vue({
         available: this.classAvailable,
         nearby: this.nearby
       }
+    },
+    greetComputed: function() {
+      return "This is from app one"
     }
   }
 })
+
+var two = new Vue({
+  el: "#vue-app-two",
+  data: {
+    title: "Vue App Two",
+  },
+  methods: {
+    changeTitle: function() {
+      one.title = "New One Title"
+    }
+  },
+  computed: {
+    greet: function() {
+      return "This is from app two"
+    }
+  }
+})
+
+two.title = "Changed from outside"
