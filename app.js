@@ -83,10 +83,14 @@ var two = new Vue({
   el: "#vue-app-two",
   data: {
     title: "Vue App Two",
+    output: "your fav food"
   },
   methods: {
     changeTitle: function() {
       one.title = "New One Title"
+    },
+    readRefs: function() {
+      this.output = this.$refs.input.value
     }
   },
   computed: {
